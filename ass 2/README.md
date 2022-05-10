@@ -8,7 +8,7 @@
  - `./load_model.ipynb`：Show how to use the pre-trained & saved model to predicted new data.
 
  ## How to train, show, and load
- To training from scratch, you may see how the code is orginized in `./main.ipynb`(Note That the model is saved in my [google drive](https://drive.google.com/drive/folders/148frXHSm31UpbejRjVpwg3P67nHjIgaJ), you should download it and put it in the same dir as `./load_model.ipynb`). Or for simply, the key option might be:
+ To training from scratch, you may see how the code is orginized in `./main.ipynb`. Or for simply, the key option might be:
 ```python
 pureNet = CIFAR_ResNet(method = "pure",
                     lr = 1e-2, 
@@ -22,7 +22,7 @@ pureNet.train()
 pureNet.save("pureNet")
 ```
 
-To load the pre-trained ResNet-18 model and use it, you may see how the code is orginized in `./load_model.ipynb`. Or for simply, the key option might be:
+To load the pre-trained ResNet-18 model and use it, you may see how the code is orginized in `./load_model.ipynb`(Note That the model is saved in my [google drive](https://drive.google.com/drive/folders/148frXHSm31UpbejRjVpwg3P67nHjIgaJ), you should download it and put it in the same dir as `./load_model.ipynb`). Or for simply, the key option might be:
 ```python
 NetModel = CIFAR_ResNet.load("./models/cutoutNet.pkl")
 outputs = NetModel(X_try)
